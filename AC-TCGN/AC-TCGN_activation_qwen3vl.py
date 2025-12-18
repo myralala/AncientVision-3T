@@ -173,7 +173,7 @@ def get_mlp_up_proj_params(model):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--task", type=str, required=True, choices=["OCR","IC","IU"])
-    ap.add_argument("--Activationain_path", type=str, default=None)
+    ap.add_argument("--Activation_path", type=str, default=None)
     ap.add_argument("--model_path", type=str, default="/data-1/Qwen3-VL-8B-Instruct")
     ap.add_argument("--batch_size", type=int, default=4)
     ap.add_argument("--max_samples", type=int, default=0)
