@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](YOUR_HUGGINGFACE_LINK_HERE)
+[![Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/Myralala/AncientVision-3T)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 </div>
@@ -73,9 +73,13 @@ Along with the dataset, we propose **AC-TCGN (Ancient Chinese Target-Conditioned
 ## 🚀 Usage
 
 ### 1. Download Data
-The dataset is hosted on Hugging Face. You can load it directly:
+The dataset and images are hosted on Hugging Face. You can load it directly using the `datasets` library:
 
 ```python
 from datasets import load_dataset
 
-dataset = load_dataset("Your-HF-Username/AncientVision-3T")
+# Load the AncientVision-3T dataset
+dataset = load_dataset("Myralala/AncientVision-3T")
+
+# Accessing the data
+print(dataset)
