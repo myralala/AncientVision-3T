@@ -1,4 +1,4 @@
-# 📜 AncientVision-3T: A Hierarchical Benchmark for Ancient Chinese Document Vision-Language Tasks
+# 📜 AncientVision-3T: A Hierarchical Benchmark for Ancient Chinese Document Image-Text Tasks
 
 <div align="center">
 
