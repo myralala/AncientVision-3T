@@ -32,7 +32,7 @@ The dataset is curated from public digital archives such as the *Siku Quanshu* a
 | Subset | Count | Content | Target Task |
 | :--- | :---: | :--- | :--- |
 | **Textual Images** | 500 | Traditional Chinese text with vertical/left-to-right layouts | **OCR Perception** |
-| **Illustrative Images** | 1,000 | Cultural subjects (e.g., ritual vessels, musical instruments, attire) | **Image Classification (IC)** & **Image Understanding (IU)** |
+| **Illustrative Images** | 1,000 | Cultural subjects (e.g., ritual vessels, musical instruments, attire) ,Multiple-Type Illustrations| **Image Classification (IC)** & **Image Understanding (IU)** |
 
 ## 🎯 Tasks
 
