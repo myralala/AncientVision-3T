@@ -1,6 +1,6 @@
-# AC-TCGN Usage Guide
+# AC-TCGN 
 
-This is a tool for task-specific neuron analysis and intervention on Qwen-VL models.
+This repository contains the implementation of **AC-TCGN**, a tool for identifying and analyzing ancient Chinese document image-text task neurons neurons in Vision-Language Models (e.g., Qwen3-VL, Xunzi-Qwen2-VL).
 
 ## 1. Installation
 
@@ -12,8 +12,8 @@ pip install torch transformers qwen-vl-utils accelerate
 
 ## 2. Usage Steps
 
-### Step 1: Activation Tracing
-Calculate and save the neuron importance matrix for a specific task.
+Step 1: Gradient-based Importance Estimation
+Compute the identification scores for intermediate neurons using Target-Conditioned Gradients. Instead of simple activation counting, this step calculates the gradients of the task loss $L$ with respect to the up-projection parameters $W_{up}$ to quantify the causal contribution of each neuron.
 
 ```bash
 python AC-TCGN_activation_qwen3vl.py \
@@ -40,9 +40,10 @@ python AC-TCGN_identify_qwen3vl.py \
 
 ### Step 3: Evaluation & Intervention (Single Task)
 
-**Baseline Evaluation:**
-Test model performance without any intervention.
 
+Baseline Evaluation: Test the model's intrinsic capabilities on AncientVision-3T without intervention.
+
+Evaluate the causal effect of the identified neurons by applying strong inhibition and measuring the performance degradation.
 ```bash
 python AC-TCGN_eval_qwen3vl.py \
     --task OCR \
@@ -50,13 +51,13 @@ python AC-TCGN_eval_qwen3vl.py \
 ```
 
 **Intervention Evaluation:**
-Load the mask file to inhibit specific neurons and evaluate performance.
+Load the mask file to inhibit ancient Chinese document image-text task neurons and evaluate performance.
 
 ```bash
 python AC-TCGN_eval_qwen3vl.py \
     --task OCR \
     --model_path /path/to/Qwen3-VL-Instruct \
-    --activation_mask ./masks/OCR_mask_top5.pt
+    --activation_mask ./masks/OCR_mask.pt
 ```
 
 ### Step 4: 3x3 Cross-Task Evaluation
