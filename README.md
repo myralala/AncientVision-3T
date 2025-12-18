@@ -20,7 +20,7 @@ Despite the rapid evolution of VLMs, applying general visual models to ancient m
 Unlike existing outcome-oriented benchmarks, AncientVision-3T employs a **hierarchical task design**—spanning from OCR perception to image understanding—to decouple and analyze model capabilities based on cognitive complexity.
 
 <div align="center">
-  <img src="AncientVision-3T/figure/figure1.jpg" width="80%" alt="AncientVision-3T Framework">
+  <img src="figure/figure1.jpg" width="80%" alt="AncientVision-3T Framework">
   <br>
   <em>Figure 1: The hierarchical task design of AncientVision-3T.</em>
 </div>
@@ -88,9 +88,3 @@ The textual data (ground truth labels, OCR text, and classification categories) 
     ```
 2.  Align images with annotations:
     Ensure the image filenames in the Hugging Face dataset match the IDs provided in the JSON/Text files located in the `data/` folder of this repository.
-
-### 3. Evaluation
-Run the evaluation script to test model performance:
-
-```bash
-python evaluate.py --model_path "path/to/model" --image_dir "path/to/downloaded/images" --task "ocr"
