@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/Myralala/AncientVision-3T)
+[![Dataset](https://img.shields.io/badge/HuggingFace-Images-yellow)](https://huggingface.co/datasets/Myralala/AncientVision-3T)
 [![Benchmark](https://img.shields.io/badge/Benchmark-Results-success)](#-leaderboard)
 [![Interpretability](https://img.shields.io/badge/Method-Interpretability-blueviolet)](#-interpretability-ac-tcgn)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -20,7 +20,7 @@ Despite the rapid evolution of VLMs, applying general visual models to ancient m
 Unlike existing outcome-oriented benchmarks, AncientVision-3T employs a **hierarchical task design**—spanning from OCR perception to image understanding—to decouple and analyze model capabilities based on cognitive complexity.
 
 <div align="center">
-  <img src="./assets/figure1_framework.png" width="80%" alt="AncientVision-3T Framework">
+  <img src="AncientVision-3T/figure/figure.jpg" width="80%" alt="AncientVision-3T Framework">
   <br>
   <em>Figure 1: The hierarchical task design of AncientVision-3T.</em>
 </div>
@@ -65,23 +65,32 @@ We evaluated representative VLMs on AncientVision-3T. Below is the baseline perf
 Along with the dataset, we propose **AC-TCGN (Ancient Chinese Target-Conditioned Gradient-based Neuron Identification)**. This method allows researchers to:
 * Identify neurons crucial for predictions across OCR, Classification, and Understanding.
 * Analyze how domain adaptation affects neuronal topology and task separability.
-
-<div align="center">
-  <img src="./assets/figure3_neuron_vis.png" width="80%" alt="Neuron Visualization">
-  <br>
-  <em>Visualization of neuron activation patterns across different cognitive tasks.</em>
-</div>
+* Visualize distinct neuronal activation patterns associated with different cognitive loads.
 
 ## 🚀 Usage
 
-### 1. Download Data
-The dataset and images are hosted on Hugging Face. You can load it directly using the `datasets` library:
+The dataset is distributed across **Hugging Face** (Images) and **GitHub** (Annotations/Text).
 
-```python
-from datasets import load_dataset
+### 1. Download Images (Hugging Face)
+The high-resolution images are hosted on Hugging Face to optimize storage.
 
-# Load the AncientVision-3T dataset
-dataset = load_dataset("Myralala/AncientVision-3T")
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/Myralala/AncientVision-3T)
 
-# Accessing the data
-print(dataset)
+You can download the images manually or use the `huggingface_hub` library.
+
+### 2. Get Annotations (GitHub)
+The textual data (ground truth labels, OCR text, and classification categories) are provided in this repository.
+
+1.  Clone this repository:
+    ```bash
+    git clone [https://github.com/YourUsername/YourRepoName.git](https://github.com/YourUsername/YourRepoName.git)
+    cd YourRepoName
+    ```
+2.  Align images with annotations:
+    Ensure the image filenames in the Hugging Face dataset match the IDs provided in the JSON/Text files located in the `data/` folder of this repository.
+
+### 3. Evaluation
+Run the evaluation script to test model performance:
+
+```bash
+python evaluate.py --model_path "path/to/model" --image_dir "path/to/downloaded/images" --task "ocr"
