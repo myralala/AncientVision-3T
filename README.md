@@ -20,7 +20,7 @@ Despite the rapid evolution of VLMs, applying general visual models to ancient m
 Unlike existing outcome-oriented benchmarks, AncientVision-3T employs a **hierarchical task design**—spanning from OCR perception to image understanding—to decouple and analyze model capabilities based on cognitive complexity.
 
 <div align="center">
-  <img src="AncientVision-3T/figure/figure.jpg" width="80%" alt="AncientVision-3T Framework">
+  <img src="AncientVision-3T/figure/figure1.jpg" width="80%" alt="AncientVision-3T Framework">
   <br>
   <em>Figure 1: The hierarchical task design of AncientVision-3T.</em>
 </div>
