@@ -265,6 +265,7 @@ def main():
                 continue
             g = p.grad.detach()
             score = torch.sum(g, dim=1).abs().float().cpu().tolist()
+           #score = torch.sum(g.abs(), dim=1).float().cpu().tolist()
             row = out_data[layer_idx]
             out_data[layer_idx] = [a+b for a,b in zip(score, row)]
 
