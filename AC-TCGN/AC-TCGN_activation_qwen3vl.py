@@ -183,13 +183,13 @@ def main():
     args = ap.parse_args()
 
 
-    if args.train_path is None:
+    if args.Activation_path is None:
         if args.task == "OCR":
-            args.train_path = "./data/OCR-Activation.json"
+            args.Activation_path = "./data/OCR-Activation.json"
         elif args.task == "IC":
-            args.train_path = "./data/IC-Activation.json"
+            args. = "./data/IC-Activation.json"
         else:
-            args.train_path = "./data/IU-Activation.json"
+            args.Activation_path = "./data/IU-Activation.json"
 
     torch.manual_seed(args.seed)
 
