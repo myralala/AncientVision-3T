@@ -17,18 +17,18 @@
 
 ## 📖 Introduction
 
-**AncientVision-3T** is a benchmark designed to systematically evaluate the cognitive capabilities of Vision Language Models (VLMs) in the context of Ancient Chinese Documents.
+**AncientVision-3T** is a hierarchically structured benchmark that enables fine-grained analysis of VLM capabilities across OCR, image classification, and image understanding tasks of increasing abstraction. 
 
 Despite the rapid evolution of VLMs, applying general visual models to ancient manuscripts presents a **"dual chasm"**:
 1.  **Visual Perception:** Challenges include vertical text flow, complex layouts, and degradation noise caused by temporal erosion.
 2.  **Linguistic Comprehension:** The abstruse grammar and archaic glyphs necessitate deep linguistic priors.
 
-Unlike existing outcome-oriented benchmarks, AncientVision-3T employs a **hierarchical task design**—spanning from OCR perception to image understanding—to decouple and analyze model capabilities based on cognitive complexity.
+Distinct from existing general benchmarks, AncientVision-3T employs a **hierarchical task design** to decouple and analyze model capabilities across different levels of task complexity.
 
 <div align="center">
   <img src="figure/figure1.jpg" width="80%" alt="AncientVision-3T Framework">
   <br>
-  <em>Figure 1: The hierarchical task design of AncientVision-3T.</em>
+  <em>Figure 1: Overview of the AncientVision-3T Benchmark and the Proposed Analysis Framework.</em>
 </div>
 
 ## 📂 Dataset Statistics
@@ -71,7 +71,7 @@ We evaluated representative VLMs on AncientVision-3T. Below is the baseline perf
 Along with the dataset, we propose **AC-TCGN (Ancient Chinese Target-Conditioned Gradient-based Neuron Identification)**. This method allows researchers to:
 * Identify neurons crucial for predictions across OCR, Classification, and Understanding.
 * Analyze how domain adaptation affects neuronal topology and task separability.
-* Visualize distinct neuronal activation patterns associated with different cognitive loads.
+* Visualize distinct neuronal activation patterns across different task settings.
 
 ## 🚀 Usage
 
