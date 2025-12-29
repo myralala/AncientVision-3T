@@ -73,6 +73,15 @@ Along with the dataset, we propose **AC-TCGN (Ancient Chinese Target-Conditioned
 * **Analyze** how domain adaptation affects neuronal topology and task separability.
 * **Visualize** distinct neuronal activation patterns across different task settings.
 
+### 📊 Effectiveness of Neuron Identification
+To verify the effectiveness of AC-TCGN, we conduct a neuron inhibition experiment. By inhibiting (masking) the key neurons identified by different methods, we measure the resulting performance degradation.
+
+
+> ![Table 1](figure/result.png)
+> A larger performance drop after inhibition indicates that the identified neurons are more essential to the model's decision-making process.
+
+---
+
 ### 🔍 Neuron Activation Visualization
 The heatmaps below visualize the neuron activation patterns. The **x-axis** represents the model layer index, and the **y-axis** denotes the identified neurons associated with specific tasks.
 
