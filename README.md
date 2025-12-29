@@ -69,9 +69,24 @@ We evaluated representative VLMs on AncientVision-3T. Below is the baseline perf
 ## 🧠 Interpretability: AC-TCGN
 
 Along with the dataset, we propose **AC-TCGN (Ancient Chinese Target-Conditioned Gradient-based Neuron Identification)**. This method allows researchers to:
-* Identify neurons crucial for predictions across OCR, Classification, and Understanding.
-* Analyze how domain adaptation affects neuronal topology and task separability.
-* Visualize distinct neuronal activation patterns across different task settings.
+* **Identify** neurons crucial for predictions across OCR, Classification, and Understanding.
+* **Analyze** how domain adaptation affects neuronal topology and task separability.
+* **Visualize** distinct neuronal activation patterns across different task settings.
+
+### 🔍 Neuron Activation Visualization
+The heatmaps below visualize the neuron activation patterns. The **x-axis** represents the model layer index, and the **y-axis** denotes the identified neurons associated with specific tasks.
+
+| Model \ Task | OCR (Optical Character Recognition) | IC (Image Classification) | IU (Image Understanding) |
+| :--- | :---: | :---: | :---: |
+| **Qwen3-VL-8B** | ![OCR](figure/Qwen-OCR.png) | ![IC](figure/Qwen-IC.png) | ![IU](figure/Qwen-IU.png) |
+| **XunziQwen2-VL-7B** | ![OCR](figure/Xunzi-OCR.png) | ![IC](figure/Xunzi-IC.png) | ![IU](figure/Xunzi-IU.png) |
+
+### 📈 Key Observations
+Based on our AC-TCGN analysis, we observed several key differences between the base model and the domain-adapted model:
+
+* **OCR Task:** Neurons are primarily concentrated in **layers 4–7**. **XunziQwen2-VL-7B** exhibits denser activations than Qwen3-VL-8B, indicating a significantly enhanced capacity for ancient text recognition after domain adaptation.
+* **Image Classification (IC):** While classification typically requires higher-layer involvement, XunziQwen2-VL-7B shows weaker activation in these layers. This suggests a potential training bias toward textual data, which explains its specialized performance.
+* **Image Understanding (IU):** XunziQwen2-VL-7B demonstrates **broader and stronger activations** across multiple layers. This suggests more comprehensive visual-semantic grounding compared to the base model, which relies more on shallower layers.
 
 ## 🚀 Usage
 
