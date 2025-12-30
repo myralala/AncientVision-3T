@@ -40,6 +40,7 @@ The dataset is curated from public digital archives such as the *Siku Quanshu* a
 | **Textual Images** | 500 | Traditional Chinese text with vertical/left-to-right layouts | **OCR Perception** |
 | **Illustrative Images** | 1,000 | Cultural subjects (e.g., ritual vessels, musical instruments, attire) Multiple-Type Illustrations| **Image Classification (IC)** & **Image Understanding (IU)** |
 
+
 ## 🎯 Tasks
 
 We evaluate models across three progressive dimensions:
@@ -54,6 +55,7 @@ We evaluate models across three progressive dimensions:
     * **Metric:** ROUGE-L.
     * **Goal:** Generating semantic descriptions that bridge visual features with deep linguistic priors.
 
+
 ## 🏆 Leaderboard
 
 We evaluated representative VLMs on AncientVision-3T. Below is the baseline performance:
@@ -63,6 +65,8 @@ We evaluated representative VLMs on AncientVision-3T. Below is the baseline perf
 | **Xunzi-Qwen2-VL** (Domain-Specific) | 7B | **97.57** | 47.20 | **23.24** |
 | **Qwen3-VL** (General) | 8B | 87.94 | **78.00** | 8.06 |
 | **LLaVA-OneVision-1.5** | 8B | 6.59 | 25.60 | 4.81 |
+
+
 
 ## 🧠 Interpretability: AC-TCGN
 
@@ -94,6 +98,7 @@ Based on our AC-TCGN analysis, we observed several key differences between the b
 * **OCR Task:** Neurons are primarily concentrated in **layers 4–7**. **XunziQwen2-VL-7B** exhibits denser activations than Qwen3-VL-8B, indicating a significantly enhanced capacity for ancient text recognition after domain adaptation.
 * **Image Classification (IC):** While classification typically requires higher-layer involvement, XunziQwen2-VL-7B shows weaker activation in these layers. This suggests a potential training bias toward textual data, which explains its specialized performance.
 * **Image Understanding (IU):** XunziQwen2-VL-7B demonstrates **broader and stronger activations** across multiple layers. This suggests more comprehensive visual-semantic grounding compared to the base model, which relies more on shallower layers.
+
 
 ## 🚀 Usage
 
