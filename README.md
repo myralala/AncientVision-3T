@@ -64,8 +64,6 @@ We evaluated representative VLMs on AncientVision-3T. Below is the baseline perf
 | **Qwen3-VL** (General) | 8B | 87.94 | **78.00** | 8.06 |
 | **LLaVA-OneVision-1.5** | 8B | 6.59 | 25.60 | 4.81 |
 
-*Note: The general model (Qwen3-VL) exhibits stronger separability across tasks, while the domain-specific model (Xunzi-Qwen2-VL) demonstrates higher redundancy but superior understanding in low-resource settings.*
-
 ## 🧠 Interpretability: AC-TCGN
 
 Along with the dataset, we propose **AC-TCGN (Ancient Chinese Target-Conditioned Gradient-based Neuron Identification)**. This method allows researchers to:
