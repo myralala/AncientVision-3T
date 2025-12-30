@@ -80,7 +80,8 @@ To verify the effectiveness of AC-TCGN, we conduct a neuron inhibition experimen
 
 
 > ![Table 1](figure/result.png)
-> A larger performance drop after inhibition indicates that the identified neurons are more essential to the model's decision-making process.
+>  *Note:* A larger performance drop after inhibition indicates that the identified neurons are more essential to the model's decision-making process.
+
 
 ---
 
