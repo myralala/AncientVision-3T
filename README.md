@@ -40,6 +40,12 @@ The dataset is curated from public digital archives such as the *Siku Quanshu* a
 | **Textual Images** | 500 | Traditional Chinese text with vertical/left-to-right layouts | **OCR Perception** |
 | **Illustrative Images** | 1,000 | Cultural subjects (e.g., ritual vessels, musical instruments, attire) Multiple-Type Illustrations| **Image Classification (IC)** & **Image Understanding (IU)** |
 
+<div align="center">
+  <img src="figure/figure2.jpg" width="80%" alt="Dataset Overview">
+  <br>
+  <em>Figure 2: Overview of the dataset curated from ancient Chinese archives, consisting of 500 textual images for OCR and 1,000 illustrative images for cultural classification and image understanding across 20 categories.</em>
+</div>
+
 
 ## 🎯 Tasks
 
