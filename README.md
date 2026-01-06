@@ -26,7 +26,7 @@ Despite the rapid evolution of VLMs, applying general visual models to ancient m
 Distinct from existing general benchmarks, AncientVision-3T employs a **hierarchical task design** to decouple and analyze model capabilities across different levels of task complexity.
 
 <div align="center">
-  <img src="figure/figure1.jpg" width="80%" alt="AncientVision-3T Framework">
+  <img src="figure/fig1.png" width="90%" alt="AncientVision-3T Framework">
   <br>
   <em>Figure 1: Overview of the AncientVision-3T Benchmark and the Proposed Analysis Framework.</em>
 </div>
