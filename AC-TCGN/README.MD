@@ -57,6 +57,7 @@ Load the mask file to inhibit ancient Chinese document image-text task neurons a
 python AC-TCGN_eval_qwen3vl.py \
     --task OCR \
     --model_path /path/to/Qwen3-VL-Instruct \
+    --alpha 0.1 \
     --activation_mask ./masks/OCR_mask.pt
 ```
 
@@ -73,5 +74,6 @@ python eval_3x3.py \
     --data_ic ./data/IC-Eval.json \
     --data_iu ./data/IU-Eval.json \
     --batch_size 4 \
+    --alpha 0.1 \
     --dtype bf16
 ```
