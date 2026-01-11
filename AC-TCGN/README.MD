@@ -2,11 +2,11 @@
 
 This repository contains the implementation of **AC-TCGN**, a tool for identifying and analyzing ancient Chinese document image-text task neurons neurons in Vision-Language Models (e.g., Qwen3-VL, Xunzi-Qwen2-VL).
 The overall methodology of AC-TCGN is illustrated in Figure 1.
-<div align="center">
-  <img src="AncientVision-3T/figure/figure3.png" width="90%">
-  <br>
+<p align="center">
+  <img src="../figure/figure3.png" width="80%" />
+  <br/>
   <em>Figure 1: Overview of the Ancient Chinese document Target-Conditioned Gradient-Based Neuron Identification Framework.</em>
-</div>
+</p>
 
 
 ## 1. Installation
